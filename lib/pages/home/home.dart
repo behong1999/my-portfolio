@@ -124,9 +124,9 @@ class _HomeState extends State<Home> {
           body: ScrollablePositionedList.builder(
             itemScrollController: itemScrollController,
             itemPositionsListener: itemPositionsListener,
-            itemCount: widgetList.length,
+            itemCount: componentsList.length,
             itemBuilder: (BuildContext context, int index) {
-              return widgetList[index];
+              return componentsList[index];
             },
           ),
         ),
@@ -135,7 +135,7 @@ class _HomeState extends State<Home> {
   }
 }
 
-final widgetList = [
+final componentsList = [
   const SizedBox(height: 20),
   Carousel(),
   const SizedBox(height: 60),

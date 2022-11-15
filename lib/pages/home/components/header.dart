@@ -25,7 +25,7 @@ List<HeaderItem> headerItems = [
   ),
   HeaderItem(
     title: "CONTACT",
-    onTap: () => scrollTo(widgetList.length),
+    onTap: () => scrollTo(componentsList.length),
   ),
   // HeaderItem(title: "HIRE ME", onTap: () {}, isButton: true),
 ];
