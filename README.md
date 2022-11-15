@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # web_portfolio
 
 A new Flutter project.
@@ -17,3 +18,6 @@ samples, guidance on mobile development, and a full API reference.
 "# my_portfolio" 
 "# my_portfolio" 
 "# my_portfolio" 
+=======
+# My Responsive Web Portfolio developed in Flutter Web
+>>>>>>> 5cb629de945f5108099f3b801453f6efdc50d912
