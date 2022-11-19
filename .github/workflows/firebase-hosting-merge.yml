@@ -22,6 +22,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_PORTFOLIO_9D8D8 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HUYNHKHONHONG }}'
           channelId: live
-          projectId: my-portfolio-9d8d8
+          projectId: huynhkhonhong
