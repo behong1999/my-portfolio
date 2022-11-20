@@ -1,5 +1,4 @@
-import 'dart:html';
-
+import 'package:url_launcher/link.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons_null_safety/flutter_icons_null_safety.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -74,16 +73,21 @@ class CvSection extends StatelessWidget {
                   fontSize: 18.0,
                 ),
               ),
-              GestureDetector(
-                onTap: () => downloadFile("/assets/docs/CV- Hong Huynh.pdf"),
-                child: MouseRegion(
+              Link(
+                target: LinkTarget.blank,
+                uri: Uri.parse(
+                    'https://drive.google.com/file/d/1EcUrn_n9BG1gkCIyYfjw7DpJZjcLPAm7/view?usp=sharing'),
+                builder: (context, followLink) => MouseRegion(
                   cursor: SystemMouseCursors.click,
-                  child: Text(
-                    "DOWNLOAD CV",
-                    style: GoogleFonts.oswald(
-                      color: mColor,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 16.0,
+                  child: TextButton(
+                    onPressed: followLink,
+                    child: Text(
+                      "DOWNLOAD CV",
+                      style: GoogleFonts.oswald(
+                        color: mColor,
+                        fontWeight: FontWeight.w900,
+                        fontSize: 16.0,
+                      ),
                     ),
                   ),
                 ),
@@ -151,10 +155,4 @@ class CvSection extends StatelessWidget {
       ),
     );
   }
-}
-
-downloadFile(url) {
-  AnchorElement anchorElement = AnchorElement(href: url);
-  anchorElement.download = "Download CV";
-  anchorElement.click();
 }
