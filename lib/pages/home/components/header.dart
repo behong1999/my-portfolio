@@ -40,7 +40,7 @@ class Logo extends StatelessWidget {
         child: GestureDetector(
           child: Image.asset(
             Assets.logo.path,
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
           ),
           onTap: () {
             scrollTo(0);
@@ -74,27 +74,28 @@ class _HeaderState extends State<Header> {
 
   ResponsiveVisibility mobileHeader() {
     return ResponsiveVisibility(
-        visible: false,
-        visibleWhen: const [
-          Condition.equals(name: MOBILE),
-          Condition.smallerThan(name: MOBILE),
-        ],
-        child: Row(
-          children: [
-            ContrastButton(),
-            const SizedBox(width: 10),
-            GestureDetector(
-              onTap: () {
-                //*  Open drawer using global key
-                Globals.scaffoldKey.currentState!.openEndDrawer();
-              },
-              child: const Icon(
-                FlutterIcons.menu_fea,
-                size: 28.0,
-              ),
+      visible: false,
+      visibleWhen: const [
+        Condition.equals(name: MOBILE),
+        Condition.smallerThan(name: MOBILE),
+      ],
+      child: Row(
+        children: [
+          ContrastButton(),
+          const SizedBox(width: 10),
+          GestureDetector(
+            onTap: () {
+              //*  Open drawer using global key
+              Globals.scaffoldKey.currentState!.openEndDrawer();
+            },
+            child: const Icon(
+              FlutterIcons.menu_fea,
+              size: 28.0,
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 
   ResponsiveVisibility desktopTabletHeader() {
