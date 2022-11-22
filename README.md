@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-# web_portfolio
 
-A new Flutter project.
+# My web portfolio developed in Flutter
 
 ## Getting Started
-
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# my_portfolio" 
-"# my_portfolio" 
-"# my_portfolio" 
-=======
-# My Responsive Web Portfolio developed in Flutter Web
->>>>>>> 5cb629de945f5108099f3b801453f6efdc50d912
