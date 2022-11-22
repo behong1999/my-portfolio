@@ -79,8 +79,8 @@ class ContactFormState extends State<ContactForm> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: ScreenHelper.isMobile(context)
-          ? MediaQuery.of(context).size.width * 0.8
-          : MediaQuery.of(context).size.width * 0.15,
+          ? MediaQuery.of(context).size.height * 0.55
+          : MediaQuery.of(context).size.height * 0.18,
       child: Form(
           key: _formKey,
           child: LayoutBuilder(builder: (context, constraints) {

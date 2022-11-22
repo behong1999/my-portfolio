@@ -186,7 +186,7 @@ class _CarouselState extends State<Carousel>
       height: carouselContainerHeight,
       width: double.infinity,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(

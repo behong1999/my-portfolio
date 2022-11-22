@@ -9,6 +9,7 @@ import 'package:web_portfolio/pages/home/components/contrast_button.dart';
 import 'package:web_portfolio/pages/home/home.dart';
 import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/globals.dart';
+import 'package:web_portfolio/utils/screen_helper.dart';
 
 List<HeaderItem> headerItems = [
   HeaderItem(
@@ -62,7 +63,8 @@ class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+      padding: EdgeInsets.symmetric(
+          horizontal: 30.0, vertical: ScreenHelper.isMobile(context) ? 10 : 0),
       child: Row(
         children: [
           desktopTabletHeader(),
