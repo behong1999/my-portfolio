@@ -103,18 +103,20 @@ class ContactFormState extends State<ContactForm> {
                             value!.isEmpty ? 'Empty Input' : null,
                       ),
                       const SizedBox(height: 15),
-                      ContactTextField(
-                          controller: _email,
-                          hint: 'Email',
-                          validator: (value) {
-                            RegExp regex = RegExp(r'\w+@\w+\.\w+');
-                            if (value!.isEmpty) {
-                              return 'Empty Input';
-                            }
-                            return regex.hasMatch(value)
-                                ? null
-                                : 'Invalid Input';
-                          }),
+                      Expanded(
+                        child: ContactTextField(
+                            controller: _email,
+                            hint: 'Email',
+                            validator: (value) {
+                              RegExp regex = RegExp(r'\w+@\w+\.\w+');
+                              if (value!.isEmpty) {
+                                return 'Empty Input';
+                              }
+                              return regex.hasMatch(value)
+                                  ? null
+                                  : 'Invalid Input';
+                            }),
+                      ),
                     ],
                   ),
                 ),
