@@ -79,7 +79,7 @@ class ContactFormState extends State<ContactForm> {
   Widget build(BuildContext context) {
     return SizedBox(
       height: ScreenHelper.isMobile(context)
-          ? MediaQuery.of(context).size.height * 0.55
+          ? MediaQuery.of(context).size.height * 0.32
           : MediaQuery.of(context).size.height * 0.18,
       child: Form(
           key: _formKey,
@@ -93,14 +93,16 @@ class ContactFormState extends State<ContactForm> {
                   : Axis.horizontal,
               children: [
                 Expanded(
-                  flex: ScreenHelper.isMobile(context) ? 0 : 1,
+                  flex: ScreenHelper.isMobile(context) ? 1 : 1,
                   child: Column(
                     children: [
-                      ContactTextField(
-                        controller: _name,
-                        hint: 'First and Last Name',
-                        validator: (value) =>
-                            value!.isEmpty ? 'Empty Input' : null,
+                      Expanded(
+                        child: ContactTextField(
+                          controller: _name,
+                          hint: 'First and Last Name',
+                          validator: (value) =>
+                              value!.isEmpty ? 'Empty Input' : null,
+                        ),
                       ),
                       const SizedBox(height: 15),
                       Expanded(

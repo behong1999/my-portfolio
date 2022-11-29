@@ -47,7 +47,7 @@ class PokedexAd extends StatelessWidget {
                       children: [
                         Positioned(
                           top: -40,
-                          left: 180,
+                          left: ScreenHelper.isMobile(context) ? 150 : 180,
                           child: Image.asset(
                             Assets.pokeBall.path,
                             width: 150,
