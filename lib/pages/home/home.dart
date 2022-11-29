@@ -49,6 +49,7 @@ class _HomeState extends State<Home> {
       },
       child: Consumer(
         builder: (context, ThemeModel themeNotifier, _) => Scaffold(
+          resizeToAvoidBottomInset: false,
           endDrawer: Drawer(
             backgroundColor:
                 themeNotifier.isDark ? dBackgroundColor : lBackgroundColor,
