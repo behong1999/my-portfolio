@@ -58,6 +58,7 @@ class _HomeState extends State<Home> {
               child: Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: ListView.separated(
+                  physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: ((context, index) {
                     final item = headerItems[index];
                     return Column(
