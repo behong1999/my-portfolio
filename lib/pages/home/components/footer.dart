@@ -44,7 +44,7 @@ class Footer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Text(
-            'Design and Developed by Hong Huynh',
+            'Designed and Developed by Hong Huynh',
             style: TextStyle(
               fontWeight: FontWeight.w800,
               color: Colors.white,

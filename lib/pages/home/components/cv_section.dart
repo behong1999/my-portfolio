@@ -65,12 +65,14 @@ class CvSection extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "LEARN HARD,\nWORK SMART",
-                style: GoogleFonts.oswald(
-                  fontWeight: FontWeight.w900,
-                  height: 1.5,
-                  fontSize: 18.0,
+              Expanded(
+                child: Text(
+                  "LEARN HARD,\nWORK SMART",
+                  style: GoogleFonts.oswald(
+                    fontWeight: FontWeight.w900,
+                    height: 1.5,
+                    fontSize: 18.0,
+                  ),
                 ),
               ),
               Link(
@@ -81,12 +83,14 @@ class CvSection extends StatelessWidget {
                   cursor: SystemMouseCursors.click,
                   child: TextButton(
                     onPressed: followLink,
+                    style: TextButton.styleFrom(backgroundColor: mColor),
                     child: Text(
-                      "DOWNLOAD CV",
+                      "CLICK HERE TO SEE MY CV",
                       style: GoogleFonts.oswald(
-                        color: mColor,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 16.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
+                        fontSize: 18.0,
                       ),
                     ),
                   ),

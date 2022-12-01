@@ -17,17 +17,21 @@ List<HeaderItem> headerItems = [
     onTap: () => scrollTo(0),
   ),
   HeaderItem(
+    title: "CV",
+    onTap: () => scrollTo(6),
+  ),
+  HeaderItem(
     title: "PROJECTS",
-    onTap: () => scrollTo(7),
+    onTap: () => scrollTo(8),
   ),
   HeaderItem(
     title: "TESTIMONIALS",
-    onTap: () => scrollTo(11),
-  ),
-  HeaderItem(
-    title: "CONTACT",
     onTap: () => scrollTo(componentsList.length),
   ),
+  // HeaderItem(
+  //   title: "CONTACT",
+  //   onTap: () => scrollTo(componentsList.length),
+  // ),
   // HeaderItem(title: "HIRE ME", onTap: () {}, isButton: true),
 ];
 

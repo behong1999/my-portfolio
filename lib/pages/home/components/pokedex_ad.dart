@@ -7,6 +7,8 @@ import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 class PokedexAd extends StatelessWidget {
+  const PokedexAd({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ScreenHelper(

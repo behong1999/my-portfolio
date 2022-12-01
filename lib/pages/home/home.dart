@@ -20,10 +20,9 @@ final itemScrollController = ItemScrollController();
 final itemPositionsListener = ItemPositionsListener.create();
 
 scrollTo(int index) {
-  itemScrollController.scrollTo(
+  itemScrollController.jumpTo(
     index: index,
-    duration: const Duration(seconds: 3),
-    curve: Curves.fastOutSlowIn,
+    alignment: 0.88,
   );
 }
 
@@ -53,7 +52,7 @@ class _HomeState extends State<Home> {
           endDrawer: Drawer(
             backgroundColor:
                 themeNotifier.isDark ? dBackgroundColor : lBackgroundColor,
-            width: 120,
+            width: MediaQuery.of(context).size.width * 0.30,
             child: SafeArea(
               child: Padding(
                 padding: const EdgeInsets.only(top: 10),
@@ -87,7 +86,7 @@ class _HomeState extends State<Home> {
                               onTap: () {
                                 item.onTap();
                                 Timer(
-                                  const Duration(milliseconds: 500),
+                                  const Duration(milliseconds: 200),
                                   () => Globals.scaffoldKey.currentState!
                                       .closeEndDrawer(),
                                 );
@@ -135,7 +134,7 @@ class _HomeState extends State<Home> {
               itemScrollController: itemScrollController,
               itemPositionsListener: itemPositionsListener,
               itemCount: componentsList.length,
-              itemBuilder: (BuildContext context, int index) {
+              itemBuilder: (context, int index) {
                 return componentsList[index];
               },
             ),
@@ -154,7 +153,7 @@ final componentsList = [
   const SizedBox(height: 60),
   CvSection(),
   const SizedBox(height: 30),
-  PokedexAd(),
+  const PokedexAd(),
   const SizedBox(height: 60),
   StockMarketAd(),
   const SizedBox(height: 30),
