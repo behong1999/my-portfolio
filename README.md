@@ -7,6 +7,6 @@
 
 2. You can send me a message via the website
 
-3. You can see what projects I did
+3. You can see what projects I have done
 
 
