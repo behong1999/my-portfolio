@@ -1,7 +1,12 @@
 
-# My web portfolio developed in Flutter
+# My Web Portfolio developed in Flutter
 
-## Getting Started
-This project is a starting point for a Flutter application.
+## What can you do with my web portfolio?
+
+1. You can view my CV
+
+2. You can send me a message via the website
+
+3. You can see what projects I have done
 
 
