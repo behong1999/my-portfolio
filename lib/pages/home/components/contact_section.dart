@@ -106,14 +106,18 @@ class ContactFormState extends State<ContactForm> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      ContactTextField(
-                        controller: _name,
-                        hint: 'First and Last Name',
-                        validator: (value) =>
-                            value!.isEmpty ? 'Empty Input' : null,
+                      SizedBox(
+                        height: 35,
+                        child: ContactTextField(
+                          controller: _name,
+                          hint: 'First and Last Name',
+                          validator: (value) =>
+                              value!.isEmpty ? 'Empty Input' : null,
+                        ),
                       ),
                       const SizedBox(height: 15),
-                      Expanded(
+                      SizedBox(
+                        height: 35,
                         child: ContactTextField(
                           controller: _email,
                           hint: 'Email',
@@ -132,7 +136,7 @@ class ContactFormState extends State<ContactForm> {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
+                  // height: 15,
                   width: 50,
                 ),
                 Expanded(

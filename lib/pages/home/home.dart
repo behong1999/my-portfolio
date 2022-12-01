@@ -22,7 +22,7 @@ final itemPositionsListener = ItemPositionsListener.create();
 scrollTo(int index) {
   itemScrollController.jumpTo(
     index: index,
-    alignment: 0.88,
+    alignment: 0.85,
   );
 }
 
