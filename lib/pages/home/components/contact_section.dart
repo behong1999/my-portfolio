@@ -7,6 +7,11 @@ import 'package:web_portfolio/utils/constants.dart';
 import 'package:web_portfolio/utils/custom_widgets.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
+final _name = TextEditingController();
+final _email = TextEditingController();
+final _message = TextEditingController();
+final _formKey = GlobalKey<FormState>();
+
 class ContactSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -65,23 +70,11 @@ class ContactForm extends StatefulWidget {
 }
 
 class ContactFormState extends State<ContactForm> {
-  final _name = TextEditingController();
-  final _email = TextEditingController();
-  final _message = TextEditingController();
-  final _formKey = GlobalKey<FormState>();
   Gradient textButtonColor = const LinearGradient(colors: [
     Colors.purple,
     mColor,
     Colors.blue,
   ]);
-
-  @override
-  void dispose() {
-    _name.dispose();
-    _email.dispose();
-    _message.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +83,7 @@ class ContactFormState extends State<ContactForm> {
           ? MediaQuery.of(context).size.height * 0.35
           : MediaQuery.of(context).size.height * 0.25,
       child: Form(
-        key: _formKey,
+        // key: _formKey,
         child: LayoutBuilder(
           builder: (context, constraints) {
             return Flex(

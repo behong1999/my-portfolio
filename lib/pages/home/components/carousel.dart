@@ -12,6 +12,8 @@ import 'package:web_portfolio/utils/screen_helper.dart';
 
 import '../../../models/carousel_item.dart';
 
+final TextEditingController _emailTextController = TextEditingController();
+
 class Carousel extends StatefulWidget {
   @override
   State<Carousel> createState() => _CarouselState();
@@ -21,15 +23,7 @@ class _CarouselState extends State<Carousel>
     with SingleTickerProviderStateMixin {
   final CarouselController _carouselController = CarouselController();
 
-  final TextEditingController _emailTextController = TextEditingController();
-
   String? _validate;
-
-  @override
-  void dispose() {
-    _emailTextController.dispose();
-    super.dispose();
-  }
 
   Gradient textButtonColor = const LinearGradient(colors: [
     Colors.purple,
