@@ -85,6 +85,10 @@ class _HomeState extends State<Home> {
                             child: GestureDetector(
                               onTap: () {
                                 item.onTap();
+                                setState(() {
+                                  textColor = null;
+                                  currentIndex = null;
+                                });
                                 Timer(
                                   const Duration(milliseconds: 200),
                                   () => Globals.scaffoldKey.currentState!
